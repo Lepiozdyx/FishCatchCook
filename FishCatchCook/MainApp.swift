@@ -1,13 +1,11 @@
 import SwiftUI
 
-@main
-struct MainApp: App {
+
+struct MainApp: View {
     @StateObject private var store = AppDataStore()
 
-    var body: some Scene {
-        WindowGroup {
+    var body: some View {
             AppRootView()
                 .environmentObject(store)
-        }
     }
 }
